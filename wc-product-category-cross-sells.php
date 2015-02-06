@@ -9,7 +9,7 @@
 
 /**
  * Plugin Name:       Woocommerce Product Category Cross-Sells
- * Description:       Define Woocommerce product cross-sells on the product category level
+ * Description:       Define Woocommerce cross-sells for products in a category
  * Plugin URI:        https://github.com/lmoffereins/wc-product-category-cross-sells/
  * Version:           1.0.0
  * Author:            Laurens Offereins
