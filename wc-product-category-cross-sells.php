@@ -120,6 +120,14 @@ final class WC_Product_Category_Cross_Sells {
 	 * Return product category cross sell ids for products without defined cross sells
 	 *
 	 * @since 1.0.0
+	 *
+	 * @uses get_current_screen()
+	 * @uses remove_filter()
+	 * @uses current_filter()
+	 * @uses get_post_meta()
+	 * @uses add_filter()
+	 * @uses get_the_terms()
+	 * @uses get_woocommerce_term_meta()
 	 * 
 	 * @param null $retval Short-circuit value
 	 * @param int $post_id Product ID
@@ -202,9 +210,9 @@ final class WC_Product_Category_Cross_Sells {
 
 				// Chosenify select elements
 				jQuery( 'select.ajax_chosen_select_products' ).ajaxChosen({
-					method:         'GET',
-					url:            '<?php echo admin_url( "admin-ajax.php" ); ?>',
-					dataType:       'json',
+					method: 'GET',
+					url: '<?php echo admin_url( "admin-ajax.php" ); ?>',
+					dataType: 'json',
 					afterTypeDelay: 100,
 					data: {
 						action:   'woocommerce_json_search_products',
@@ -233,6 +241,8 @@ final class WC_Product_Category_Cross_Sells {
 	 * Output the add-new category meta field
 	 *
 	 * @since 1.0.0
+	 *
+	 * @uses WC_Product_Category_Cross_Sells::select_cross_sells()
 	 */
 	public function add_category_fields() { ?>
 
@@ -249,6 +259,8 @@ final class WC_Product_Category_Cross_Sells {
 	 * Output the edit category meta field
 	 *
 	 * @since 1.0.0
+	 *
+	 * @uses WC_Product_Category_Cross_Sells::select_cross_sells()
 	 * 
 	 * @param object $term Term data
 	 * @param string $taxonomy Taxonomy name
@@ -272,6 +284,10 @@ final class WC_Product_Category_Cross_Sells {
 	 * @since 1.0.0
 	 * 
 	 * @see WC_Meta_Box_Product_Data::output()
+	 *
+	 * @uses get_woocommerce_term_meta()
+	 * @uses wc_get_product()
+	 * @uses WC_Product::get_formatted_name()
 	 * 
 	 * @param int $term_id Optional. Term ID
 	 */
