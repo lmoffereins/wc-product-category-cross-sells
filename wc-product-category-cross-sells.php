@@ -179,9 +179,7 @@ final class WC_Product_Category_Cross_Sells {
 			return;
 
 		// Enqueue required scripts
-		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'ajax-chosen' );
-		wp_enqueue_script( 'chosen' );
 	}
 
 	/**
