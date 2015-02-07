@@ -1,5 +1,3 @@
-<?php
-
 === WC Product Category Cross Sells ===
 Contributors: Offereins
 Tags: Woocommerce, product, category, cross, sell
@@ -10,6 +8,10 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Define Woocommerce cross sells for products in a category
+
+== Description ==
+
+Define default cross sell products for products within the same category. When cross sells are not defined per product, the product category cross sells are used instead.
 
 == Installation ==
 
