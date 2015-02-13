@@ -161,7 +161,12 @@ final class WC_Product_Category_Cross_Sells {
 
 			// Collect cross sells per term
 			foreach ( $terms as $term ) {
-				$retval += (array) get_woocommerce_term_meta( $term->term_id, $this->meta_key );
+				$cross_sells = get_woocommerce_term_meta( $term->term_id, $this->meta_key )
+
+				// Only append cross sells when defined
+				if ( $cross_sells ) {
+					$retval += (array) $cross_sells;
+				}
 			}
 
 			// Return shuffled, wrapped in array
