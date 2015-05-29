@@ -2,8 +2,8 @@
 Contributors: Offereins
 Tags: Woocommerce, product, category, cross, sell
 Requires at least: 4.0, WC 2.2
-Tested up to: 4.1
-Stable tag: 1.0.1
+Tested up to: 4.2.2
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,6 +20,9 @@ You can download and install WC Product Category Cross Sells using the built in 
 Activate WC Product Category Cross Sells in the "Plugins" admin panel using the "Activate" link. 
 
 == Changelog ==
+
+= 1.0.2 =
+* Fixed bug with missing semicolon in `::filter_cross_sell_ids()`
 
 = 1.0.1 =
 * Fixed bug where non-defined cross sells were collected
